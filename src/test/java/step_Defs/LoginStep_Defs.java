@@ -28,4 +28,15 @@ public class LoginStep_Defs {
         loginPOJO.verifyPOJO();
     }
 
+    @Given("I make a request with invalid {string} and {string}")
+    public void ıMakeARequestWithInvalidAnd(String email, String password) {
+
+        login.loginNegatives(email, password);
+    }
+
+    @Then("Verify response with status code {int}")
+    public void verifyResponseWithStatusCode(int StatusCode) {
+
+        login.verifyNegativeTests(StatusCode);
+    }
 }
