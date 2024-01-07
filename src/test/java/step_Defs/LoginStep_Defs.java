@@ -13,12 +13,13 @@ public class LoginStep_Defs {
     public void i_make_a_request_with_valid_credentials() {
 
         login.loginRequest();
-        //login.hamcrestLogin();
+
     }
     @Then("Verify response with status code {int} and response body")
     public void verify_response_with_status_code_and_response_body(Integer Code) {
 
-        login.verifyBody(Code);
+        //login.verifyBody(Code);
+        login.hamcrestLogin();
     }
 
 }

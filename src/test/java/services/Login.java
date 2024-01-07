@@ -56,8 +56,8 @@ public class Login {
         //Assert.assertTrue(response.asString().contains("Lion"));
 
         //Method 3: path() metodu
-        //String actualFirstName = response.path("data.firstName");
-        //Assert.assertEquals("Lionel", actualFirstName);
+        String actualFirstName = response.path("data.firstName");
+        Assert.assertEquals("Lionel", actualFirstName);
 
         //Method 4: de serialization to collection
         Map<String, Object>login = response.as(Map.class);
